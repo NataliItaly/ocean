@@ -3,6 +3,7 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
+    font-size: $default-font-size;
     padding: 15px 40px;
     display: inline-block;
     border-radius: 100px;
@@ -80,6 +81,97 @@
   &-animated {
     animation: moveInBottom 0.6s ease-out 0.7s backwards;
     -webkit-animation: moveInBottom 0.6s ease-out 0.7s backwards;
+  }
+}
+
+.btn-wave {
+  width: 220px;
+  padding: 20px 30px 10px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  &:hover {
+    .wave_btn {
+      top: -120px;
+    }
+  }
+
+  .wave-text {
+    position: relative;
+    z-index: 1;
+    color: $color-white;
+  }
+
+  .wave_btn {
+    width: 220px;
+    height: 220px;
+    background-color: $color-dark;
+    box-shadow: inset 0 0 50px $color-medium;
+    position: absolute;
+    left: 0;
+    top: -80px;
+    transition: 0.4s;
+
+    &::before,
+    &::after {
+      width: 200%;
+      height: 200%;
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translate(-50%, -75%);
+    }
+
+    &::before {
+      top: -10px;
+      border-radius: 45%;
+      background-color: $color-medium;
+      animation: btnWave 5s linear infinite;
+      -webkit-animation: btnWave 5s linear infinite;
+    }
+
+    &::after {
+      border-radius: 40%;
+      background-color: $color-light;
+      animation: btnWave 10s linear infinite;
+    }
+  }
+
+  &-light {
+    width: 300px;
+
+    .wave-text {
+      color: $color-dark;
+    }
+
+    .wave_btn {
+      width: 300px;
+      background-color: $color-white;
+      background-color: $color-light;
+
+      &::before,
+      &::after {
+        width: 150%;
+        height: 150%;
+      }
+
+      &::before {
+        top: 0;
+        background-color: $color-white;
+        opacity: 0.5;
+      }
+
+      &::after {
+        top: 20px;
+        background-color: $color-white;
+      }
+
+      &:hover .wave_btn {
+        top: -163px;
+      }
+    }
   }
 }
 
