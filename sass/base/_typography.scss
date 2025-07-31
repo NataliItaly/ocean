@@ -45,6 +45,7 @@ body {
     color: transparent;
     display: inline-block;
     margin: 0 5px;
+    overflow: hidden;
     animation: wave 2s ease-in-out infinite;
     -webkit-animation: textWave 2s ease-in-out infinite;
 
@@ -87,6 +88,11 @@ body {
     &:nth-child(10) {
       animation-delay: 1.8s;
     }
+  }
+
+  &--jumping-fish {
+    position: relative;
+    margin-top: 100px;
   }
 }
 
