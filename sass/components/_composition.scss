@@ -5,6 +5,17 @@
     width: 65%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     position: absolute;
+    z-index: 10;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
 
     &--1 {
       left: 0;
@@ -20,5 +31,24 @@
       left: 20%;
       top: 10rem;
     }
+
+    &:hover {
+      outline: 1.5rem solid $color-medium;
+      outline-offset: 20px;
+      transform: scale(1.05) translateY(-10px);
+      -webkit-transform: scale(1.05) translateY(-10px);
+      -moz-transform: scale(1.05) translateY(-10px);
+      -ms-transform: scale(1.05) translateY(-10px);
+      -o-transform: scale(1.05) translateY(-10px);
+      z-index: 20;
+    }
+  }
+
+  &:hover &__img:not(:hover) {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
   }
 }
