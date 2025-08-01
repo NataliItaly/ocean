@@ -1,7 +1,13 @@
 .aquarium {
+  &__btn-text {
+    position: relative;
+    z-index: 10;
+  }
+
   &__fish {
+    display: block;
+
     &--1 {
-      display: block;
       width: 40px;
       height: 40px;
       position: absolute;
@@ -9,7 +15,42 @@
       left: 0;
       background: url(../img/aquarium/1.svg) center / cover;
       animation: aquariumFish1 10s;
-      -webkit-animation: aquariumFish1 10s infinite forwards;
+      -webkit-animation: aquariumFish1 5s ease-in-out infinite forwards;
+    }
+
+    &--2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background: url(../img/aquarium/2.svg) no-repeat center/cover;
+      animation: aquariumFish2 10s 2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+      -webkit-animation: aquariumFish2 10s 2s cubic-bezier(0.45, 0, 0.55, 1)
+        infinite;
+    }
+
+    &--3 {
+      position: absolute;
+      bottom: 0;
+      left: -40px;
+      width: 30px;
+      height: 30px;
+      background: url(../img/aquarium/2.svg) no-repeat center/cover;
+      animation: aquariumFish2 7s 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+      -webkit-animation: aquariumFish2 7s 3s cubic-bezier(0.45, 0, 0.55, 1)
+        infinite;
+    }
+
+    &--4 {
+      position: absolute;
+      bottom: 50%;
+      left: -40px;
+      width: 30px;
+      height: 30px;
+      background: url(../img/aquarium/2.svg) no-repeat center/cover;
+      animation: aquariumFish3 8s ease-in-out infinite;
+      -webkit-animation: aquariumFish3 8s ease-in-out infinite;
     }
   }
 }

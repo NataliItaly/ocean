@@ -40,12 +40,15 @@ body {
   display: inline-block;
 
   & span {
-    background-clip: text;
     background-image: linear-gradient(to right, $color-dark, $color-light);
+    background-clip: text;
     color: transparent;
     display: inline-block;
     margin: 0 5px;
     overflow: hidden;
+  }
+
+  &--wave {
     animation: wave 2s ease-in-out infinite;
     -webkit-animation: textWave 2s ease-in-out infinite;
 

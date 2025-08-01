@@ -2,6 +2,11 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
+@import 'base/base';
+@import 'base/animation';
+@import 'base/typography';
+@import 'base/utilities';
+
 @import 'components/aquarium';
 @import 'components/button';
 @import 'components/wave';
@@ -9,11 +14,8 @@
 @import 'components/composition';
 @import 'components/feature-box';
 @import 'components/jumping-fish';
-
-@import 'base/base';
-@import 'base/animation';
-@import 'base/typography';
-@import 'base/utilities';
+@import 'components/story';
+@import 'components/video';
 
 @import 'layout/header';
 @import 'layout/grid.scss';

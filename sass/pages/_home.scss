@@ -15,3 +15,14 @@
   background-color: $color-gray;
   text-align: center;
 }
+
+.section-story {
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    rgba($color-light, 0.2),
+    rgba($color-light, 0.8),
+    rgba($color-dark, 0.8),
+    rgba($color-dark, 0.8)
+  );
+}
