@@ -1,0 +1,15 @@
+.aquarium {
+  &__fish {
+    &--1 {
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      background: url(../img/aquarium/1.svg) center / cover;
+      animation: aquariumFish1 10s;
+      -webkit-animation: aquariumFish1 10s infinite forwards;
+    }
+  }
+}

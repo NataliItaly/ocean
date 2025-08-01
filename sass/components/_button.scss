@@ -1,4 +1,6 @@
 .btn {
+  padding: 20px 30px 10px;
+
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -86,7 +88,6 @@
 
 .btn-wave {
   width: 220px;
-  padding: 20px 30px 10px;
   position: relative;
   display: block;
   overflow: hidden;
@@ -183,5 +184,15 @@
     display: inline-block;
     text-decoration: none;
     padding: 3px;
+  }
+}
+
+.btn-tours {
+  &:link,
+  &:visited {
+    padding: 3rem 7rem;
+    margin-top: 3rem;
+    border: 1px solid $color-medium;
+    overflow: hidden;
   }
 }

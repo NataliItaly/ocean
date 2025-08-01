@@ -144,13 +144,21 @@
     -ms-transform: scale(0);
     -o-transform: scale(0);
   }
-  12% {
+  10% {
     opacity: 0;
     transform: scale(0);
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -o-transform: scale(0);
+  }
+  20% {
+    opacity: 0.5;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
   60% {
     opacity: 1;
@@ -162,10 +170,49 @@
   }
   100% {
     opacity: 0;
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
+    transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+  }
+}
+
+@keyframes aquariumFish1 {
+  0% {
+    transform: translateX(0) rotate(0);
+    -webkit-transform: translateX(0) rotate(0);
+    -moz-transform: translateX(0) rotate(0);
+    -ms-transform: translateX(0) rotate(0);
+    -o-transform: translateX(0) rotate(0);
+  }
+  10% {
+    transform: translateX(30%) skewY(5deg);
+    -webkit-transform: translateX(30%) skewY(5deg);
+    -moz-transform: translateX(30%) skewY(5deg);
+    -ms-transform: translateX(30%) skewY(5deg);
+    -o-transform: translateX(30%) skewY(5deg);
+  }
+  15% {
+    transform: translateX(35%) rotate(5deg);
+    -webkit-transform: translateX(35%) rotate(5deg);
+    -moz-transform: translateX(35%) rotate(5deg);
+    -ms-transform: translateX(35%) rotate(5deg);
+    -o-transform: translateX(35%) rotate(5deg);
+  }
+  20% {
+    transform: translateX(40%) rotate(0);
+    -webkit-transform: translateX(40%) rotate(0);
+    -moz-transform: translateX(40%) rotate(0);
+    -ms-transform: translateX(40%) rotate(0);
+    -o-transform: translateX(40%) rotate(0);
+  }
+
+  100% {
+    transform: translateX(200%) rotate(0);
+    -webkit-transform: translateX(200%) rotate(0);
+    -moz-transform: translateX(200%) rotate(0);
+    -ms-transform: translateX(200%) rotate(0);
+    -o-transform: translateX(200%) rotate(0);
   }
 }

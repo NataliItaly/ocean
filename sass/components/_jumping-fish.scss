@@ -27,13 +27,14 @@
   &::after {
     content: '';
     width: 30px;
-    height: 10px;
-    border: 1px solid $color-medium;
-    outline: 1px solid $color-medium;
-    outline-offset: 5px;
+    height: 5px;
+    border: 1px solid $color-light;
+    outline: 1px solid $color-light;
+    outline-offset: 3px;
     position: absolute;
-    top: 78%;
+    top: 90%;
     right: 14%;
+    transform: scale(0);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -41,5 +42,9 @@
     -o-border-radius: 50%;
     animation: splash 5s ease-in-out backwards infinite;
     -webkit-animation: splash 5s ease-in-out backwards infinite;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
   }
 }
