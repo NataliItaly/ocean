@@ -14,6 +14,21 @@
     <title>Ocean</title>
   </head>
   <body>
+    <div class="navigation">
+      <input class="navigation__checkbox  visually-hidden" type="checkbox" name="nav-checkbox" id="nav-checkbox">
+      <label for="nav-checkbox" class="navigation__label"></label>
+      <div class="navigation__bg"></div>
+      <div class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__list-item"><a href="#about" class="navigation__link">About</a></li>
+          <li class="navigation__list-item"><a href="#home" class="navigation__link">Features</a></li>
+          <li class="navigation__list-item"><a href="#tours" class="navigation__link">Tours</a></li>
+          <li class="navigation__list-item"><a href="#story" class="navigation__link">Story</a></li>
+          <li class="navigation__list-item"><a href="#tours" class="navigation__link">Book</a></li>
+
+        </ul>
+      </div>
+    </div>
     <header class="header">
       <div class="header__logo-box logo">
         <img class="logo__img" src="./img/logo-icon.svg" alt="" />
@@ -32,8 +47,9 @@
         ></a>
       </div>
     </header>
+
     <main>
-      <section class="section-about">
+      <section class="section-about" id="about">
         <div class="u-center-text u-margin-bottom-medium">
           <h2 class="heading-secondary heading-secondary--jumping-fish">
             <div class="jumping-fish"></div>
@@ -96,7 +112,7 @@
         </div>
       </section>
 
-      <section class="section-features">
+      <section class="section-features" id="features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -157,7 +173,7 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="tours">
         <div class="u-center-text u-margin-bottom-medium">
           <h2 class="heading-secondary">
             <span>Explore the world</span>
@@ -247,7 +263,7 @@
         >
       </section>
 
-      <section class="section-story">
+      <section class="section-story" id="story">
         <div class="video">
           <video class="video__source" autoplay muted loop playsinline>
             <source src="./img/video.mp4" type="video/mp4" />
@@ -308,7 +324,7 @@
         </div>
       </section>
 
-      <section class="section-book">
+      <section class="section-book" id="book">
         <div class="book">
           <div class="u-margin-bottom-medium book__heading-wraper">
             <h2 class="heading-secondary">
@@ -382,16 +398,19 @@
             <div class="footer__nav">
               <ul class="footer__list">
                 <li class="footer__list-item">
-                  <a href="" class="footer__link">Home</a>
+                  <a href="" class="footer__link">About</a>
                 </li>
                 <li class="footer__list-item">
-                  <a href="" class="footer__link">About</a>
+                  <a href="" class="footer__link">Features</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="" class="footer__link">Tours</a>
                 </li>
                 <li class="footer__list-item">
                   <a href="" class="footer__link">Story</a>
                 </li>
                 <li class="footer__list-item">
-                  <a href="" class="footer__link">Tours</a>
+                  <a href="" class="footer__link">Book</a>
                 </li>
               </div>
             </div>

@@ -1,0 +1,76 @@
+.navigation {
+  overflow: hidden;
+
+  &__label {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: $color-gray-light url(../img/nav.svg) no-repeat center / 30px;
+    box-shadow: 1px 1px 5px rgba($color-black, 0.4);
+    transition: 0.4s;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /*top: 3rem;
+    right: 3rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;*/
+    background-image: radial-gradient(
+      at right top,
+      darken($color-dark, 10%),
+      $color-dark,
+      $color-light
+    );
+    transform: scale(0);
+    transform-origin: top right;
+    z-index: 100;
+    transition: 0.6s;
+  }
+
+  &__nav {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-200%);
+    z-index: 110;
+    transition: 0.4s;
+  }
+
+  &__list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 50px;
+  }
+
+  &__link {
+    color: $color-white;
+    font-size: 2.5rem;
+  }
+
+  &__checkbox:checked ~ &__bg {
+    transform: scale(1);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    transform: translateY(0);
+  }
+
+  &__checkbox:checked ~ &__label {
+    transform: rotate(90deg);
+  }
+}
