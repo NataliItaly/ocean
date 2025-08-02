@@ -1,6 +1,8 @@
 .form {
   max-width: 500px;
   padding: 2rem;
+  position: relative;
+  z-index: 10;
 
   &__input {
     width: 100%;
@@ -43,6 +45,10 @@
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+  }
+
+  &__label:focus {
+    border: 2px solid blue;
   }
 
   &__input:placeholder-shown + &__label {
@@ -111,5 +117,36 @@
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: $color-white;
+    text-shadow: 0 0 5px rgba($color-black, 0.6);
+    background-image: linear-gradient(
+      to right,
+      $color-light,
+      $color-medium 15%,
+      $color-dark 50%
+    );
+    background-size: 180% 180%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    padding: 1.5rem 2rem 1.5rem 6rem;
+    transition: 0.6s ease-in;
+    -webkit-transition: 0.6s ease-in;
+    -moz-transition: 0.6s ease-in;
+    -ms-transition: 0.6s ease-in;
+    -o-transition: 0.6s ease-in;
+
+    &-arrow {
+      line-height: 1;
+    }
+
+    &:hover {
+      background-position: 230% 355%;
+    }
   }
 }

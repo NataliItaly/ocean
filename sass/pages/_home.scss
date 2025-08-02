@@ -12,22 +12,33 @@
 }
 
 .section-tours {
-  background-color: $color-gray-light;
+  background-image: linear-gradient(
+    to bottom,
+    $color-gray-light,
+    $color-complementary-blue 99%
+  );
   text-align: center;
+  padding-bottom: 100px;
 }
 
 .section-story {
   position: relative;
   background-image: linear-gradient(
-    to right,
-    rgba($color-light, 0.2),
-    rgba($color-light, 0.8),
-    rgba($color-dark, 0.8),
-    rgba($color-dark, 0.8)
+    to bottom,
+    $color-complementary-blue 3%,
+    rgba($color-medium, 0.4),
+    rgba($color-dark, 0.4),
+    $color-dark 98%
   );
 }
 
 .section-book {
   padding: 100px;
-  background-image: linear-gradient(to top right, $color-light, $color-dark);
+  background-image: linear-gradient(
+    to bottom,
+    $color-dark,
+    $color-medium,
+    $color-light,
+    $color-dark
+  );
 }
