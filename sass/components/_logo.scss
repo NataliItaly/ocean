@@ -1,0 +1,10 @@
+.logo {
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+
+  &__img {
+    height: 30px;
+    margin-bottom: -15px;
+  }
+}

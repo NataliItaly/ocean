@@ -1,5 +1,6 @@
 .footer {
-  height: 30rem;
+  color: $color-black;
+  padding: 60px 0 90px;
   background: $color-medium;
   background-position: center;
   background-size: 1500px;
@@ -8,11 +9,98 @@
 
   &__wave {
     position: absolute;
-    top: -70px;
+    top: -100px;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../img/footer/wave1.svg) no-repeat center -30px;
-    animation: footerWave1 10s ease-in-out infinite alternate;
+    background: url(../img/footer/wave.svg) no-repeat;
+    animation: footerWaveBack 6s ease-in-out infinite backwards;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../img/footer/wave.svg) no-repeat;
+      opacity: 0.3;
+      animation: footerWaveForward 4s ease-in-out infinite backwards;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../img/footer/wave.svg) no-repeat;
+      opacity: 0.6;
+      animation: footerWaveForward 3s linear infinite backwards;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__logo-box {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: start;
+    padding: 30px;
+  }
+
+  &__link {
+    color: $color-black;
+    display: inline-block;
+    padding: 5px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.6s;
+    border-radius: 5px;
+    background-image: linear-gradient(
+      rgba($color-dark, 0.4),
+      rgba($color-light, 0.4),
+      $color-medium
+    );
+    background-position: 50% 50%;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:hover {
+      background-image: linear-gradient(
+        $color-medium,
+        rgba($color-light, 0.6),
+        rgba($color-dark, 0.6)
+      );
+      background-position: 400% 400%; /*33% 515%*/
+    }
+  }
+
+  &__text {
+    padding: 30px 40px;
+    color: $color-black;
+  }
+
+  &__copyright {
+    font-style: italic;
+    text-align: center;
   }
 }

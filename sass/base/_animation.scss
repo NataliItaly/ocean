@@ -303,11 +303,21 @@
   }
 }
 
-@keyframes footerWave1 {
+@keyframes footerWaveForward {
   0% {
-    background-position-x: 0;
+    background-position-x: 0px;
   }
   100% {
-    background-position-x: -600px;
+    background-position-x: 100%;
+  }
+}
+
+@keyframes footerWaveBack {
+  0% {
+    background-position-x: 100%;
+  }
+
+  100% {
+    background-position-x: 0;
   }
 }
