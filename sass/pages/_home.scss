@@ -12,7 +12,7 @@
 }
 
 .section-tours {
-  background-color: $color-gray;
+  background-color: $color-gray-light;
   text-align: center;
 }
 
@@ -25,4 +25,9 @@
     rgba($color-dark, 0.8),
     rgba($color-dark, 0.8)
   );
+}
+
+.section-book {
+  padding: 100px;
+  background-image: linear-gradient(to top right, $color-light, $color-dark);
 }

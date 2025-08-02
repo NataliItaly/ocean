@@ -1,0 +1,15 @@
+.book {
+  max-width: 900px;
+  padding: 50px;
+  margin: 0 auto;
+  height: 50rem;
+  background: url(../img/book.jpg) no-repeat right / contain,
+    linear-gradient(to right, $color-white, #c7cbc7);
+
+  & img {
+    width: 300px;
+  }
+
+  &__form {
+  }
+}
