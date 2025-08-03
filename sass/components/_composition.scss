@@ -2,24 +2,18 @@
   position: relative;
 
   &__img {
-    width: 65%;
+    float: left;
+    width: 33%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     position: absolute;
     z-index: 10;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     transition: 0.3s ease-in;
-    -webkit-transition: 0.3s ease-in;
-    -moz-transition: 0.3s ease-in;
-    -ms-transition: 0.3s ease-in;
-    -o-transition: 0.3s ease-in;
+    position: relative;
 
     &--1 {
       left: 0;
-      top: -2rem;
+      top: 2rem;
     }
 
     &--2 {

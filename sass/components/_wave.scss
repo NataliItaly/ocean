@@ -5,10 +5,14 @@
   height: calc(2 * var(--s));
   aspect-ratio: 3;
   display: grid;
-  padding: 10px;
+  padding: 1rem;
   background: transparent;
   position: relative;
   z-index: 10;
+
+  @include responsive(phone) {
+    padding: 1rem 0.5rem;
+  }
 
   &::before {
     content: '';

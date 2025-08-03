@@ -10,24 +10,28 @@ body {
   color: $color-white;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 
   &--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3rem;
     animation: moveInLeft 1s ease-out;
     -webkit-animation: moveInLeft 1s ease-out;
+
+    @include responsive(phone) {
+      letter-spacing: 1rem;
+    }
   }
 
   &--sub {
     display: block;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: 15px;
+    letter-spacing: 1rem;
     animation: moveInLeft 1s ease-out;
     -webkit-animation: moveInRight 1s ease-out;
   }
@@ -38,6 +42,14 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
+
+  @include responsive(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 2.5rem;
+  }
 
   & span {
     background-image: linear-gradient(to right, $color-dark, $color-light);

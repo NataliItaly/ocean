@@ -6,8 +6,18 @@
   /*clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);*/
 
   &__logo-box {
-    top: 40px;
-    left: 40px;
+    top: 3rem;
+    left: 3rem;
+
+    @include responsive(tab-port) {
+      top: 2rem;
+      left: 2rem;
+    }
+
+    @include responsive(phone) {
+      top: 1rem;
+      left: 1rem;
+    }
   }
 
   &__text-box {
@@ -20,5 +30,9 @@
     -ms-transform: translate(-50%, -60%);
     -o-transform: translate(-50%, -60%);
     text-align: center;
+
+    @include responsive(phone) {
+      top: 65%;
+    }
   }
 }

@@ -13,6 +13,11 @@
     transition: 0.4s cubic-bezier(0.97, 0.01, 0.14, 0.53);
     cursor: pointer;
     z-index: 200;
+
+    @include responsive(phone) {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
   }
 
   &__bg {
