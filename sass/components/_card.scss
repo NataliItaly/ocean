@@ -30,7 +30,6 @@
     }
 
     &--back {
-      font-size: 3rem;
       color: $color-white;
       text-align: center;
       background-color: $color-light;
@@ -42,6 +41,7 @@
       padding: 4rem;
 
       p {
+        font-size: 6rem;
         margin-top: 5rem;
       }
 
