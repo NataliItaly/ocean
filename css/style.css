@@ -756,6 +756,10 @@ body {
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
+  padding: 4rem;
+}
+.card__side--back p {
+  margin-top: 5rem;
 }
 .card__side--back-1 {
   background-image: linear-gradient(to bottom, #81f5f5, rgb(152.625, 246.875, 246.875), #81f5f5);
@@ -1110,6 +1114,66 @@ body {
   margin-bottom: -15px;
 }
 
+.popup {
+  visibility: hidden;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(1, 51, 80, 0.8);
+  transition: 0.4s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__content {
+  display: table;
+  max-width: 75%;
+  background: #f9f8f2;
+  border-radius: 10px;
+  position: relative;
+}
+.popup__left {
+  width: 33%;
+  padding: 20px;
+  display: table-cell;
+}
+.popup__right {
+  width: 66%;
+  padding: 20px;
+  display: table-cell;
+  vertical-align: top;
+}
+.popup__img {
+  width: 100%;
+}
+.popup__text {
+  column-count: 2;
+  column-gap: 4rem;
+  hyphens: auto;
+}
+.popup__close {
+  width: 4rem;
+  height: 4rem;
+  padding: 0.7rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.popup__close img {
+  width: 100%;
+}
+.popup__close:hover {
+  opacity: 0.7;
+}
 .story {
   width: 75%;
   padding: 6rem;
@@ -1280,7 +1344,7 @@ body {
   transform: translateY(0);
 }
 .navigation__checkbox:checked ~ .navigation__label {
-  transform: rotate(90deg);
+  transform: rotate(450deg);
 }
 
 .header {
