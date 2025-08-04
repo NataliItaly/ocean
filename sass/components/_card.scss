@@ -1,7 +1,9 @@
 .card {
+  max-width: 50rem;
+  height: 50rem;
+  margin: 0 auto;
   perspective: 150rem;
   position: relative;
-  height: 50rem;
 
   &__side {
     position: absolute;
@@ -170,6 +172,31 @@
       &:not(:last-child) {
         border-bottom: 1px solid lighten($color-light, 10%);
       }
+    }
+  }
+
+  @include responsive(tab-port) {
+    max-width: 50rem;
+    height: auto;
+    border-radius: 2rem;
+
+    &__side {
+      position: relative;
+      border-radius: 0;
+      box-shadow: none;
+
+      &--back {
+        backface-visibility: visible;
+        transform: rotate(0);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: none;
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0);
     }
   }
 }

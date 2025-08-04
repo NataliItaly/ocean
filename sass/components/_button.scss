@@ -15,11 +15,16 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     position: relative;
+
+    @include responsive(phone) {
+      padding: 1.5rem 3rem;
+      font-size: 1.4rem;
+    }
   }
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba($color-black, 0.5);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
   }
 
   &::after {
@@ -37,7 +42,7 @@
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba($color-black, 0.4);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
 
     &::after {
       opacity: 0;
@@ -117,6 +122,10 @@
   &-light {
     width: 30rem;
 
+    @include responsive(phone) {
+      width: 25rem;
+    }
+
     .wave-text {
       color: $color-dark;
     }
@@ -165,12 +174,16 @@
   &:link,
   &:visited {
     color: $color-complementary-yellow;
-    letter-spacing: 2px;
-    word-spacing: 10px;
+    letter-spacing: 0.2rem;
+    word-spacing: 1rem;
     text-shadow: 0 0 0 $color-white;
     padding: 3rem 7rem;
     margin-top: 3rem;
     border: 1px solid $color-medium;
     overflow: hidden;
+
+    @include responsive(phone) {
+      padding: 3rem;
+    }
   }
 }

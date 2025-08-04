@@ -1,14 +1,16 @@
 .story {
-  width: 75%;
+  max-width: 70rem;
   padding: 6rem;
   margin: 0 auto 3rem;
   background: rgba($color-white, 0.8);
   box-shadow: 0 3rem 6rem rgba($color-dark, 0.6);
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  overflow: hidden;
+
+  @include responsive(phone) {
+    width: 100%;
+    padding: 3rem;
+  }
 
   &__shape {
     width: 15rem;
@@ -17,24 +19,22 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-1.5rem);
-    -webkit-transform: translateX(-1.5rem);
-    -moz-transform: translateX(-1.5rem);
-    -ms-transform: translateX(-1.5rem);
-    -o-transform: translateX(-1.5rem);
+
+    @include responsive(phone) {
+      float: none;
+      transform: none;
+      margin: 0 auto 3rem;
+    }
   }
 
   &__img {
     height: 100%;
     transform: translateX(-3rem);
-    -webkit-transform: translateX(-3rem);
-    -moz-transform: translateX(-3rem);
-    -ms-transform: translateX(-3rem);
-    -o-transform: translateX(-3rem);
     transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
+
+    @include responsive(phone) {
+      transform: translateX(0);
+    }
   }
 
   &__caption {
@@ -86,6 +86,16 @@
       background-image: linear-gradient(to bottom, $color-light, $color-dark);
       animation: oscillation 10s ease-in-out infinite;
       -webkit-animation: oscillation 10s ease-in-out infinite;
+
+      @include responsive(tab-land) {
+        font-size: 6rem;
+      }
+      @include responsive(tab-port) {
+        font-size: 4rem;
+      }
+      @include responsive(phone) {
+        font-size: 3rem;
+      }
     }
   }
 }
