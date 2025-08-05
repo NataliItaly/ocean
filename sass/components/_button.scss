@@ -4,7 +4,7 @@
   &,
   &:link,
   &:visited {
-    text-transform: uppercase;
+    /*text-transform: uppercase;
     text-decoration: none;
     font-size: $default-font-size;
     padding: 1.5rem 4rem;
@@ -14,7 +14,8 @@
     transition: all 0.3s;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    position: relative;
+    position: relative;*/
+    @include buttonPrimary($color: inherit, $bg-color: transparent);
 
     @include responsive(phone) {
       padding: 1.5rem 3rem;
@@ -50,14 +51,22 @@
     }
   }
 
-  &-white {
+  &-primary_light {
+    @include buttonPrimary($width: 30rem);
+  }
+
+  &-primary_dark {
+    @include buttonPrimary($width: 22rem);
+  }
+
+  /*&-white {
     background-color: $color-white;
     color: $color-dark;
 
     &::after {
       background-color: $color-white;
     }
-  }
+  }*/
 
   &-animated {
     animation: moveInBottom 0.6s ease-out 0.7s backwards;
@@ -66,24 +75,15 @@
 }
 
 .btn-wave {
-  width: 22rem;
-  position: relative;
-  display: block;
-  overflow: hidden;
+  @include buttonWavering;
 
-  &:hover {
-    .wave_btn {
-      top: -12rem;
-    }
-  }
-
-  .wave-text {
+  /*.btn-wave__text {
     position: relative;
     z-index: 1;
     color: $color-white;
   }
 
-  .wave_btn {
+  .btn-wave__wavering {
     width: 22rem;
     height: 22rem;
     background-color: $color-dark;
@@ -91,7 +91,7 @@
     position: absolute;
     left: 0;
     top: -8rem;
-    transition: 0.4s;
+    transition: 0.5s;
 
     &::before,
     &::after {
@@ -119,6 +119,12 @@
     }
   }
 
+  &:hover {
+    .btn-wave__wavering {
+      top: -15rem; //-12rem;
+    }
+  }
+
   &-light {
     width: 30rem;
 
@@ -126,13 +132,12 @@
       width: 25rem;
     }
 
-    .wave-text {
+    .btn-wave__text {
       color: $color-dark;
     }
 
-    .wave_btn {
+    .btn-wave__wavering {
       width: 30rem;
-      background-color: $color-white;
       background-color: $color-light;
 
       &::before,
@@ -152,11 +157,11 @@
         background-color: $color-white;
       }
 
-      &:hover .wave_btn {
+      &:hover .btn-wave__wavering {
         top: -16.3rem;
       }
     }
-  }
+  }*/
 }
 
 .btn-text {

@@ -6,6 +6,114 @@
   }
 }
 
+@mixin buttonPrimary(
+  $vert-p: 1.5rem,
+  $hor-p: 4rem,
+  $color: inherit,
+  $bg-color: transparent,
+  $width: fit-content
+) {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: $default-font-size;
+  color: $color;
+  background: $bg-color;
+  width: $width;
+  padding: $vert-p $hor-p;
+  display: inline-block;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.3s;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+}
+
+@mixin buttonWavering() {
+  .btn-wave__text {
+    position: relative;
+    z-index: 10;
+    color: $color-white;
+  }
+
+  .btn-wave__wavering {
+    /*width: 22rem;
+    height: 22rem;*/
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: $color-dark;
+    box-shadow: inset 0 0 5rem $color-medium;
+    position: absolute;
+    left: 0;
+    top: -8rem;
+    transition: 0.5s;
+
+    &::before,
+    &::after {
+      width: 200%;
+      height: 200%;
+      content: '';
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform: translate(-50%, -75%);
+    }
+
+    &::before {
+      top: -1rem;
+      border-radius: 45%;
+      background-color: $color-medium;
+      animation: btnWave 5s linear infinite;
+      -webkit-animation: btnWave 5s linear infinite;
+    }
+
+    &::after {
+      border-radius: 40%;
+      background-color: $color-light;
+      animation: btnWave 10s linear infinite;
+    }
+  }
+
+  &:hover {
+    .btn-wave__wavering {
+      top: -15rem; //-12rem;
+    }
+  }
+
+  &-light {
+    @include responsive(phone) {
+      width: 25rem;
+    }
+
+    .btn-wave__text {
+      color: $color-dark;
+    }
+
+    .btn-wave__wavering {
+      //width: 30rem;
+      background-color: $color-light; // #36dbdb; //
+
+      &::before,
+      &::after {
+        width: 150%;
+        height: 150%;
+      }
+
+      &::before {
+        top: 0;
+        background-color: $color-white;
+        z-index: 1;
+      }
+
+      &::after {
+        top: 2rem;
+        background-color: lighten($color-light, 10%);
+      }
+    }
+  }
+}
+
 @mixin responsive($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {

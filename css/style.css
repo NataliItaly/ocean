@@ -576,16 +576,39 @@ body {
 
 .btn {
   padding: 2rem 3rem 1rem;
+  /*&-white {
+    background-color: $color-white;
+    color: $color-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }*/
 }
 .btn, .btn:link, .btn:visited {
-  text-transform: uppercase;
+  /*text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: $default-font-size;
   padding: 1.5rem 4rem;
   display: inline-block;
   border: none;
   border-radius: 10rem;
   transition: all 0.3s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: relative;*/
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: inherit;
+  background: transparent;
+  width: fit-content;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.3s;
+  overflow: hidden;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   position: relative;
@@ -620,12 +643,39 @@ body {
   opacity: 0;
   transform: scaleX(1.4) scaleY(1.6);
 }
-.btn-white {
-  background-color: #fff;
-  color: #014e7a;
+.btn-primary_light {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: inherit;
+  background: transparent;
+  width: 30rem;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.3s;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: relative;
 }
-.btn-white::after {
-  background-color: #fff;
+.btn-primary_dark {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: inherit;
+  background: transparent;
+  width: 22rem;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.3s;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: relative;
 }
 .btn-animated {
   animation: moveInBottom 0.6s ease-out 0.7s backwards;
@@ -633,30 +683,110 @@ body {
 }
 
 .btn-wave {
-  width: 22rem;
-  position: relative;
-  display: block;
-  overflow: hidden;
+  /*.btn-wave__text {
+    position: relative;
+    z-index: 1;
+    color: $color-white;
+  }
+
+  .btn-wave__wavering {
+    width: 22rem;
+    height: 22rem;
+    background-color: $color-dark;
+    box-shadow: inset 0 0 5rem $color-medium;
+    position: absolute;
+    left: 0;
+    top: -8rem;
+    transition: 0.5s;
+
+    &::before,
+    &::after {
+      width: 200%;
+      height: 200%;
+      content: '';
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform: translate(-50%, -75%);
+    }
+
+    &::before {
+      top: -1rem;
+      border-radius: 45%;
+      background-color: $color-medium;
+      animation: btnWave 5s linear infinite;
+      -webkit-animation: btnWave 5s linear infinite;
+    }
+
+    &::after {
+      border-radius: 40%;
+      background-color: $color-light;
+      animation: btnWave 10s linear infinite;
+    }
+  }
+
+  &:hover {
+    .btn-wave__wavering {
+      top: -15rem; //-12rem;
+    }
+  }
+
+  &-light {
+    width: 30rem;
+
+    @include responsive(phone) {
+      width: 25rem;
+    }
+
+    .btn-wave__text {
+      color: $color-dark;
+    }
+
+    .btn-wave__wavering {
+      width: 30rem;
+      background-color: $color-light;
+
+      &::before,
+      &::after {
+        width: 150%;
+        height: 150%;
+      }
+
+      &::before {
+        top: 0;
+        background-color: $color-white;
+        opacity: 0.5;
+      }
+
+      &::after {
+        top: 2rem;
+        background-color: $color-white;
+      }
+
+      &:hover .btn-wave__wavering {
+        top: -16.3rem;
+      }
+    }
+  }*/
 }
-.btn-wave:hover .wave_btn {
-  top: -12rem;
-}
-.btn-wave .wave-text {
+.btn-wave .btn-wave__text {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   color: #fff;
 }
-.btn-wave .wave_btn {
-  width: 22rem;
-  height: 22rem;
+.btn-wave .btn-wave__wavering {
+  /*width: 22rem;
+  height: 22rem;*/
+  width: 100%;
+  aspect-ratio: 1;
   background-color: #014e7a;
   box-shadow: inset 0 0 5rem #5094f9;
   position: absolute;
   left: 0;
   top: -8rem;
-  transition: 0.4s;
+  transition: 0.5s;
 }
-.btn-wave .wave_btn::before, .btn-wave .wave_btn::after {
+.btn-wave .btn-wave__wavering::before, .btn-wave .btn-wave__wavering::after {
   width: 200%;
   height: 200%;
   content: "";
@@ -665,49 +795,44 @@ body {
   left: 50%;
   transform: translate(-50%, -75%);
 }
-.btn-wave .wave_btn::before {
+.btn-wave .btn-wave__wavering::before {
   top: -1rem;
   border-radius: 45%;
   background-color: #5094f9;
   animation: btnWave 5s linear infinite;
   -webkit-animation: btnWave 5s linear infinite;
 }
-.btn-wave .wave_btn::after {
+.btn-wave .btn-wave__wavering::after {
   border-radius: 40%;
   background-color: #81f5f5;
   animation: btnWave 10s linear infinite;
 }
-.btn-wave-light {
-  width: 30rem;
+.btn-wave:hover .btn-wave__wavering {
+  top: -15rem;
 }
 @media (max-width: 37.5em) {
   .btn-wave-light {
     width: 25rem;
   }
 }
-.btn-wave-light .wave-text {
+.btn-wave-light .btn-wave__text {
   color: #014e7a;
 }
-.btn-wave-light .wave_btn {
-  width: 30rem;
-  background-color: #fff;
+.btn-wave-light .btn-wave__wavering {
   background-color: #81f5f5;
 }
-.btn-wave-light .wave_btn::before, .btn-wave-light .wave_btn::after {
+.btn-wave-light .btn-wave__wavering::before, .btn-wave-light .btn-wave__wavering::after {
   width: 150%;
   height: 150%;
 }
-.btn-wave-light .wave_btn::before {
+.btn-wave-light .btn-wave__wavering::before {
   top: 0;
   background-color: #fff;
-  opacity: 0.5;
+  z-index: 1;
 }
-.btn-wave-light .wave_btn::after {
+.btn-wave-light .btn-wave__wavering::after {
   top: 2rem;
-  background-color: #fff;
-}
-.btn-wave-light .wave_btn:hover .wave_btn {
-  top: -16.3rem;
+  background-color: rgb(176.25, 248.75, 248.75);
 }
 
 .btn-text:link, .btn-text:visited {
@@ -734,7 +859,7 @@ body {
   }
 }
 
-.wave {
+.wave-line {
   box-sizing: content-box;
   --s: 8px;
   --b: 3px;
@@ -747,11 +872,11 @@ body {
   z-index: 10;
 }
 @media (max-width: 37.5em) {
-  .wave {
+  .wave-line {
     padding: 1rem 0.5rem;
   }
 }
-.wave::before {
+.wave-line::before {
   content: "";
   --_g: calc(-0.6 * var(--s)), #0000 calc(99% - var(--b)),
     #fff calc(101% - var(--b)) 99%, #0000 101%;
@@ -797,11 +922,6 @@ body {
   color: #fff;
   text-align: center;
   background-color: #81f5f5;
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
   padding: 4rem;
 }
 .card__side--back p {
