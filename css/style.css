@@ -801,6 +801,7 @@ body {
   color: #fff;
   text-align: center;
   background-color: #81f5f5;
+  transform: rotateY(180deg);
   padding: 4rem;
 }
 .card__side--back p {
