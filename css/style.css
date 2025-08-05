@@ -4,6 +4,9 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+*:focus {
+  outline: 5px solid #5094f9;
+}
 
 html {
   font-size: 62.5%;
@@ -228,11 +231,8 @@ section {
 }
 @keyframes aquariumFish2 {
   0% {
+    left: 0px;
     transform: translateX(-10px) rotate(0deg) scaleY(1);
-    -webkit-transform: translateX(-10px) rotate(0deg) scaleY(1);
-    -moz-transform: translateX(-10px) rotate(0deg) scaleY(1);
-    -ms-transform: translateX(-10px) rotate(0deg) scaleY(1);
-    -o-transform: translateX(-10px) rotate(0deg) scaleY(1);
   }
   25% {
     transform: translateX(25%) rotate(10deg) scaleY(0.9);
@@ -244,11 +244,8 @@ section {
     transform: translateX(75%) rotate(-10deg) scaleY(0.9);
   }
   100% {
-    transform: translateX(350px) rotate(0deg) scaleY(1);
-    -webkit-transform: translateX(350px) rotate(0deg) scaleY(1);
-    -moz-transform: translateX(350px) rotate(0deg) scaleY(1);
-    -ms-transform: translateX(350px) rotate(0deg) scaleY(1);
-    -o-transform: translateX(350px) rotate(0deg) scaleY(1);
+    transform: translateX(400px) rotate(0deg) scaleY(1);
+    left: 110%;
   }
 }
 @keyframes aquariumFish3 {
@@ -290,6 +287,22 @@ section {
     -moz-transform: rotateZ(0deg) rotateY(0) scaleY(1);
     -ms-transform: rotateZ(0deg) rotateY(0) scaleY(1);
     -o-transform: rotateZ(0deg) rotateY(0) scaleY(1);
+  }
+}
+@keyframes aquariumFish4 {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 200%;
+  }
+}
+@keyframes bubble {
+  0% {
+    bottom: -1.2rem;
+  }
+  100% {
+    bottom: 100%;
   }
 }
 @keyframes oscillation {
@@ -543,6 +556,86 @@ body {
   background: url(../img/aquarium/2.svg) no-repeat center/cover;
   animation: aquariumFish3 8s ease-in-out infinite;
   -webkit-animation: aquariumFish3 8s ease-in-out infinite;
+}
+.aquarium__fish--5 {
+  position: absolute;
+  bottom: 10%;
+  right: -40px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/aquarium/3.svg) no-repeat center/contain;
+  animation: aquariumFish3 8s ease-in-out infinite;
+  -webkit-animation: aquariumFish3 9s ease-in-out infinite;
+}
+.aquarium__fish--6 {
+  position: absolute;
+  bottom: 20%;
+  right: -40px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/aquarium/3.svg) no-repeat center/contain;
+  animation: aquariumFish3 7s ease-in-out infinite backwards;
+  -webkit-animation: aquariumFish3 8s 1s ease-in-out infinite;
+}
+.aquarium__fish--7 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0;
+  background: url(../img/aquarium/4.svg) center/cover;
+  animation: aquariumFish1 10s;
+  -webkit-animation: aquariumFish4 5s 5s ease-in-out infinite backwards;
+}
+.aquarium__bubble {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.1);
+  position: absolute;
+  bottom: -1.2rem;
+}
+.aquarium__bubble--1 {
+  left: 3rem;
+  animation: bubble 5s 1s ease-in infinite forwards;
+}
+.aquarium__bubble--2 {
+  left: 7rem;
+  animation: bubble 6s 1.5s linear infinite forwards;
+}
+.aquarium__bubble--3 {
+  left: 10rem;
+  animation: bubble 7s 0s ease-out infinite forwards;
+}
+.aquarium__bubble--4 {
+  left: 15rem;
+  animation: bubble 4s 1s ease-in infinite;
+}
+.aquarium__bubble--5 {
+  left: 20rem;
+  animation: bubble 2s 0.8s ease-in-out infinite;
+}
+.aquarium__bubble--6 {
+  right: 4rem;
+  animation: bubble 9s 1s ease-in infinite forwards;
+}
+.aquarium__bubble--7 {
+  right: 8rem;
+  animation: bubble 6s 1.4s ease-in-out infinite forwards;
+}
+.aquarium__bubble--8 {
+  right: 14rem;
+  animation: bubble 7s 0s ease-in infinite forwards;
+}
+.aquarium__bubble--9 {
+  right: 19rem;
+  animation: bubble 5s 0.7s linear infinite;
+}
+.aquarium__bubble--10 {
+  right: 24rem;
+  animation: bubble 3s 1.7s ease-in infinite;
 }
 
 .book {
@@ -1133,25 +1226,34 @@ body {
 .form__btn {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-  background-image: linear-gradient(to right, #81f5f5, #5094f9 15%, #014e7a 50%);
+  /*background-image: linear-gradient(
+    to right,
+    $color-light,
+    $color-medium 15%,
+    $color-dark 50%
+  );
   background-size: 180% 180%;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  padding: 1.5rem 2rem 1.5rem 6rem;
+  -webkit-backface-visibility: hidden;*/
+  padding: 2rem 6rem;
   transition: 0.6s ease-in;
-  -webkit-transition: 0.6s ease-in;
-  -moz-transition: 0.6s ease-in;
-  -ms-transition: 0.6s ease-in;
-  -o-transition: 0.6s ease-in;
 }
-.form__btn-arrow {
-  line-height: 0;
+.form__btn-text {
+  text-shadow: 2px 2px 10px rgba(1, 78, 122, 0.4);
+  line-height: 1;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-image: linear-gradient(rgba(1, 78, 122, 0.2), #014e7a, rgba(1, 78, 122, 0.2));
+  transition: 0.4s;
 }
-.form__btn:hover {
-  background-position: 230% 355%;
+.form__btn span {
+  z-index: 10;
+}
+.form__btn:hover .form__btn-text {
+  background-image: linear-gradient(rgba(129, 245, 245, 0.2), #81f5f5, rgba(129, 245, 245, 0.2));
+  color: #014e7a;
 }
 
 .jumping-fish {
@@ -1391,11 +1493,17 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  pointer-events: none;
+  user-select: none;
 }
 .video__source {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.video button:focus,
+.video .video__source:focus {
+  outline: none;
 }
 
 .navigation {

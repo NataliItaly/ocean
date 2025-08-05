@@ -70,6 +70,17 @@
   }
 }
 
+@mixin bubble {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba($color-white, 0.3);
+  box-shadow: inset 1px 1px 3px rgba($color-white, 0.1);
+  position: absolute;
+  bottom: -1.2rem;
+}
+
 @mixin responsive($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
